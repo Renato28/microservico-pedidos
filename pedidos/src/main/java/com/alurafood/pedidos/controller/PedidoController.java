@@ -43,7 +43,7 @@ public class PedidoController {
         return ResponseEntity.created(endereco).body(pedidoRealizado);
     }
 
-    @PutMapping
+    @PutMapping("/{id}/status")
     public ResponseEntity<PedidoDto> atualizaStatus(@PathVariable Long id, @RequestBody StatusDto status){
 
         PedidoDto dto = service.atualizaStatus(id, status);
